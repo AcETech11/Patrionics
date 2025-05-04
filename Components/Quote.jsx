@@ -1,6 +1,5 @@
-Preview
-Code
-import { Button } from "@/components/ui/button"
+
+import { Button } from "./ui/button"
 import {
   Dialog,
   DialogContent,
@@ -9,15 +8,15 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+} from "./ui/dialog"
+import { Input } from "./ui/input"
+import { Label } from "./ui/label"
 
 const Quote = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline">Edit Profile</Button>
+        <Button  className="bg-primary-light dark:bg-primary-dark text-background-light hover:text-primary-light dark:hover:text-primary-dark">Get Quote</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>

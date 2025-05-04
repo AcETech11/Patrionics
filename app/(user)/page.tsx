@@ -1,9 +1,11 @@
 import React from 'react'
 
+import Hero from '../../Components/Hero'
+
 const page = () => {
   return (
     <div>
-      <p className='font-headline'>Hero</p>
+      <Hero/>
     </div>
   )
 }

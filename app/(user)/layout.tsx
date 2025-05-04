@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import { Cabin, Istok_Web } from "next/font/google";
 import "../globals.css";
 
+
+
+
 import NavBar from "../../Components/NavBar";
+import MobileNav from "../../Components/MobileNav"; 
 import { ThemeProvider } from "@/Components/theme-provider";
 
 const cabin = Cabin({
@@ -28,20 +32,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" >
-      <body
-        className={`${cabin.variable} ${Istok_web.variable} antialiased`} suppressHydrationWarning
-        >
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          > 
-          <NavBar />
-          {children}
-         </ThemeProvider> 
-      </body>
-    </html>
+      <html lang="en" >
+        <body
+          className={`${cabin.variable} ${Istok_web.variable} antialiased`} suppressHydrationWarning
+          >
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            > 
+            <NavBar /> 
+            {children}
+            <MobileNav/>
+          </ThemeProvider> 
+        </body>
+      </html>
   );
 }
