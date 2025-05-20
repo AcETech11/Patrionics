@@ -6,20 +6,21 @@ const ProjectList = async() => {
       const query = `*[_type == 'project']| order(name asc){
     _id,
     title,
-    services => services.name,
+    "services": service->{name},
+    "project_categories": project_categories[]->{name},
     location,
     "imageUrl": mainImage.asset->url,
     details,
-    project_category => project_category[].name,
     publishedAt,
     body,
   }`;
       const projectList = await client.fetch(query);
       if (!projectList) return <p>Loading...</p>;
   return (
-    <div>
+
       <ProjectCards projects={projectList}/>
-    </div>
+      
+
   )
 }
 
