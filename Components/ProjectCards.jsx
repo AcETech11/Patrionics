@@ -90,7 +90,7 @@ const ProjectCards = ({ projects }) => {
     //         ))}
     //         </CarouselContent>
     //     </Carousel>
-    </div>
+    // </div>
   );
   
 };
