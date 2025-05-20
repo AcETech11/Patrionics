@@ -25,8 +25,8 @@ const Hero = () => {
             Transforming Spaces with<br className='hidden md:block' />
             Smart Automation Solutions
           </h1>
-          <p className='text-sm font-light dark:text-gray-dark text-gray-light '>
-          we specialize in innovative home and business automation solutions that enhance security and convenience.<br/> Discover how our cutting-edge technology can streamline your daily operations and elevate your living experience.
+          <p className='text-sm dark:text-gray-dark text-gray-light px-3'>
+          we specialize in innovative home and business automation solutions that enhance security and convenience.<br className='hidden md:block'/> Discover how our cutting-edge technology can streamline your daily operations and elevate your living experience.
           </p>
           <div className='mt-4'>
             <Link href='/'>

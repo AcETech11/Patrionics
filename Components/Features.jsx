@@ -69,7 +69,7 @@ const Features = () => {
             icon: <BsDoorOpenFill className='text-4xl  bg-secondary-light dark:bg-secondary-dark rounded-full p-2 text-background-light dark:text-background-dark' />,
             title: 'Enhance Guest Experience with Our Hotel Door Lock Solutions',
             text: 'Upgrade your hospitality offering with secure, keyless, and modern access systems.',
-            action: <Link href='/'><Button>Learn More</Button></Link>
+            action: <Link href='/'><Button className='bg-primary-light dark:bg-primary-dark'>Learn More</Button></Link>
           }].map((feature, i) => (
             <motion.div
               key={i}
