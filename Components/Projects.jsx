@@ -4,17 +4,29 @@ import ProjectList from './ProjectList'
 
 const Projects = () => {
   return (
-    <div className='w-full h-full padding bg-primary-light dark:bg-primary-dark mt-12 py-3'>
-        <div className='w-full h-full flex flex-col gap-4'>
-            {/* Top */}
-            <div className='flex flex-col gap-2 text-center'>
-                <h1 className='text-3xl md:text-5xl lg:text-6xl font-bold font-headline text-foreground-dark '>See Our Systems in Action</h1>
-                <p className='text-sm text-foreground-dark'>Explore real-world installations showcasing our expertise in security and automation solutions for homes and businesses.</p>
-                <Link href='/' className='text-sm font-headline font-light bg-secondary-light dark:bg-primary-dark text-background-light dark:text-background-dark p-1.5 rounded-md'>View More Projects</Link>
-            </div>
-            {/* Bottom */}
-            <ProjectList />
+    <div className='w-full h-full padding bg-foreground-dark dark:bg-foreground-light mt-12 py-3 rounded-tl-2xl rounded-tr-2xl'>
+        
+        <div className='w-full h-full flex flex-col items-center gap-4 '>
+          <h1 className='text-center text-sm font-headline font-light text-gray-light dark:text-gray-dark border border-gray-light dark:border-gray-dark p-2 rounded-full'>Projects</h1>
 
+          <div className='w-full h-full flex flex-col items-center gap-4 lg:flex-row-reverse'>
+            <div className='w-full h-full flex flex-col'>
+              <div className='w-full h-full flex gap-2 items-center justify-center'>
+                <h2 className='text-3xl md:text-5xl lg:text-6xl font-bold font-headline'>Where</h2>
+                <p className='text-xs text-gray-light dark:text-gray-dark'>Step into a world of intelligent systems designed to protect, automate, and elevate your lifestyle and business operations.</p>
+              </div>
+              <h2 className='text-center text-3xl md:text-5xl lg:text-6xl font-bold font-headline'>Security Meets Smart </h2>
+              <div className='w-full h-full flex flex-row-reverse gap-2 items-center justify-center'>
+                <h2 className='text-3xl md:text-5xl lg:text-6xl font-bold font-headline'>Innovation</h2>
+                <p className='text-xs text-gray-light dark:text-gray-dark'>We integrate security, comfort, and control into seamless, user-friendly experiences.</p>
+              </div>
+            </div>
+          </div>
+          
+          {/* Right */}
+          <ProjectList /> 
+           
+  
         </div>
         
     </div>
