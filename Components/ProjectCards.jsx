@@ -24,14 +24,16 @@ const ProjectCards = ({ projects }) => {
   }
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
-    speed: 600,
+    fade: true,
+    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
     arrows: true,
+    waitForAnimate: false
   }
 
   //  const plugin = React.useRef(
@@ -40,7 +42,7 @@ const ProjectCards = ({ projects }) => {
 
   return (
 
-    <div className="w-full px-4 md:px-8 overflow-hidden">
+    <div className="w-full h-full px-4 md:px-8  lg:w-[30%] flex flex-col items-center justify-center">
       <Slider {...settings}>
         {projects.map((project) => (
            <div key={project._id} className="w-full h-full flex items-center justify-center">
