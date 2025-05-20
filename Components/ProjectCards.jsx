@@ -6,13 +6,11 @@ import Image from 'next/image';
 
 //Slider
 import Autoplay from "embla-carousel-autoplay"
-import { useEmblaCarousel } from "embla-carousel-react"
+//import { useEmblaCarousel } from "embla-carousel-react"
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel"
 import Link from 'next/link';
 
