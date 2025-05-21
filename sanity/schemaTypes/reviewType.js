@@ -33,17 +33,32 @@ export const reviewType = defineType({
           validation: (Rule) => Rule.required().min(1).max(2),
     }),
     defineField({
+      name: 'mainImage',
+      type: 'image',
+      validation: (Rule) => Rule.required(),
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        defineField({
+          name: 'alt',
+          type: 'string',
+          title: 'Alternative text',
+        })
+      ]
+    }),
+    defineField({
         name: 'rating',
         title: 'Rating',
         type: 'string',
         validation: (Rule) => Rule.required().min(1),
         options: {
           list: [
-            { title: '⭐ Poor', value: 'poor' },
-            { title: '⭐⭐ Fair', value: 'fair' },
-            { title: '⭐⭐⭐ Good', value: 'good' },
-            { title: '⭐⭐⭐⭐ Very Good', value: 'very_good' },
-            { title: '⭐⭐⭐⭐⭐ Excellent', value: 'excellent' },
+            { title: '⭐ Poor', value: '⭐ Poor' },
+            { title: '⭐⭐ Fair', value: '⭐⭐ Fair' },
+            { title: '⭐⭐⭐ Good', value: '⭐⭐⭐ Good' },
+            { title: '⭐⭐⭐⭐ Very Good', value: '⭐⭐⭐⭐ Very_good' },
+            { title: '⭐⭐⭐⭐⭐ Excellent', value: '⭐⭐⭐⭐⭐ Excellent' },
           ],
           layout: 'dropdown'
         }
@@ -55,31 +70,21 @@ export const reviewType = defineType({
       description: 'Client Comment goes here',
       validation: (Rule) => Rule.required() && Rule.min(100),
     }),
-    // defineField({
-    //   name: 'mainImage',
-    //   type: 'image',
-    //   validation: (Rule) => Rule.required(),
-    //   options: {
-    //     hotspot: true,
-    //   },
-    //   fields: [
-    //     defineField({
-    //       name: 'alt',
-    //       type: 'string',
-    //       title: 'Alternative text',
-    //     })
-    //   ]
-    // }),
+    
   ],
-  preview: {
-    select: {
-      title: 'name',
-      service: 'company',
-      review: 'review',
-    },
-    prepare(selection) {
-      const {service} = selection
-      return {...selection, subtitle: rating && `for ${service}`}
-    },
+preview: {
+  select: {
+    title: 'name',
+    service: 'company',
+    rating: 'rating',
+    image: 'mainImage',
   },
+  prepare(selection) {
+    const { service, rating } = selection;
+    return {
+      ...selection,
+      subtitle: service ? `for ${service} - ⭐ ${rating}` : `⭐ ${rating}`,
+    };
+  },
+}
 })

@@ -1,4 +1,3 @@
-
 import { Button } from "./ui/button"
 import {
   Dialog,
@@ -12,11 +11,11 @@ import {
 import { Input } from "./ui/input"
 import { Label } from "./ui/label"
 
-const Quote = () => {
+const  Review = () =>{
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button  className="bg-primary-light dark:bg-primary-dark text-background-light hover:text-foreground-light dark:hover:text-foreground-dark">Get Quote</Button>
+        <Button variant="outline">Leave A Review</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
@@ -30,21 +29,13 @@ const Quote = () => {
             <Label htmlFor="name" className="text-right">
               Name
             </Label>
-            <Input
-              id="name"
-              defaultValue="Pedro Duarte"
-              className="col-span-3"
-            />
+            <Input id="name" value="Pedro Duarte" className="col-span-3" />
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="username" className="text-right">
               Username
             </Label>
-            <Input
-              id="username"
-              defaultValue="@peduarte"
-              className="col-span-3"
-            />
+            <Input id="username" value="@peduarte" className="col-span-3" />
           </div>
         </div>
         <DialogFooter>
@@ -55,4 +46,4 @@ const Quote = () => {
   )
 }
 
-export default Quote
+export default Review

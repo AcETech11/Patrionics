@@ -4,7 +4,7 @@ import ProjectList from './ProjectList'
 const Projects = () => {
   return (
     <div className='w-full h-[100vh] padding bg-foreground-dark dark:bg-foreground-light mt-12 py-3 rounded-tl-2xl rounded-tr-2xl'>
-         <h1 className='w-fit text-center text-sm font-headline font-light text-gray-light dark:text-gray-dark border border-gray-light dark:border-gray-dark p-2 rounded-full'>Projects</h1> 
+        
         <div className='w-full h-full flex flex-col items-center justify-center gap-4 lg:flex-row-reverse'>
           <div className='w-full h-full lg:w-[70%] flex flex-col items-center justify-center gap-4 '>
             <div className='w-full  flex flex-col'>
