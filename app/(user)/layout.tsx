@@ -6,6 +6,7 @@ import "../globals.css";
 
 
 import NavBar from "../../Components/NavBar";
+import Footer from "../../Components/Footer";
 import MobileNav from "../../Components/MobileNav"; 
 import { ThemeProvider } from "@/Components/theme-provider";
 
@@ -57,6 +58,7 @@ export default function RootLayout({
             > 
             <NavBar /> 
             {children}
+            <Footer/>
             <MobileNav/>
           </ThemeProvider> 
         </body>
