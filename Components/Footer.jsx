@@ -26,13 +26,13 @@ const Footer = () => {
       <div className='w-full flex flex-col justify-center gap-6'>
         {/* Headline */}
         <motion.div
-          className='flex flex-col gap-4 text-center md:text-left'
+          className='flex flex-col gap-4  md:text-left'
           variants={fadeInUp}
         >
-          <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold font-headline leading-tight'>
+          <h1 className='text-5xl md:text-6xl lg:text-7xl font-bold font-headline leading-tight'>
             Your space<br />deserves smarter<br />protection.
           </h1>
-          <h2 className='text-4xl md:text-6xl lg:text-7xl font-bold font-headline text-accents-light dark:text-accents-dark underline'>
+          <h2 className='text-5xl md:text-6xl lg:text-7xl font-bold font-headline text-accents-light dark:text-accents-dark underline'>
             let’s secure it together.
           </h2>
           <div className='flex justify-end mt-4'>

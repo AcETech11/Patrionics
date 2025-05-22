@@ -40,14 +40,14 @@ const Features = () => {
           className='text-sm font-headline font-light text-gray-light dark:text-gray-dark border border-gray-light dark:border-gray-dark p-1.5 rounded-full'
           variants={item}
         >
-          Our Features
+          What We Offer
         </motion.h1>
 
         <motion.h2
           className='text-3xl md:text-5xl lg:text-6xl font-bold font-headline dark:text-foreground-dark text-foreground-light text-center'
           variants={item}
         >
-          Explore Our Cutting-Edge Automation Solutions for Home and Business
+          Intelligent Automation for <br className='hidden md:block'/> Every Space
         </motion.h2>
 
         {/* Grid Cards */}

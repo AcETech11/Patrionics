@@ -60,33 +60,6 @@
 .padding{
   @apply px-8 md:px-16 lg:px-24 xl:px-32;
 }
-/* Style for center card */
-.testimonial-slider .slick-slide {
-  opacity: 0.6;
-  transform: scale(0.95);
-  transition: all 0.3s ease-in-out;
-}
-
-.testimonial-slider .slick-center {
-  opacity: 1;
-  transform: scale(1.02);
-  /* background-color: #e0f2fe; */
-  border-radius: 10px;
-  /*  light blue */
-  border-left: 4px solid #3b82f6; /* blue-500 */
-
-  /* Optional padding fix */
-  margin-left: 0;
-
-  /* Responsive adjustments */
-  @media (min-width: 768px) {
-    margin-left: -1rem;
-    /*background-color: #dbeafe;  blue-100 */
-    border-left: none;
-    border: 2px solid #60a5fa;
-  }
-}
-
 
 
 :root {
@@ -163,6 +136,6 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground ;
   }
 }
